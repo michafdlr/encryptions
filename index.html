@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Caesar Verfahren</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h1>Caesar Verschlüsselung</h1>
+    <p>
+      Zum verschlüsseln deines Klartextes mit dem Caesar-Verfahren, gib in das Klartext-Feld den Klartext ein und klicke den "Verschlüsseln"-Knopf.
+      <br>
+      Zum entschlüsseln deines verschlüsselten Textes mit dem Caesar-Verfahren, gib in das Feld "Verschlüsselter Text" den verschlüsselten Text ein und klicke den "Entschlüsseln"-Knopf.
+    </p>
+    <div class="textbox-container">
+      <div class="textbox">
+        <h3>
+          <label for="Klartext">Klartext:</label>
+        </h3>
+        <textarea name="Klartext" id="decrypted-text" rows="10" cols="60" placeholder="Klartext"></textarea>
+        <br>
+        <input type="button" id="encrypt-btn" value="Verschlüsseln">
+      </div>
+      <div class="key-box">
+        <h3>Schlüssel (0-25)</h3>
+        <input type="number" id="key" min="0" max="25" name="key" value="0">
+      </div>
+      <div class="textbox">
+        <h3>
+          <label for="VerschlüsselterText">Verschlüsselter Text:</label>
+        </h3>
+        <textarea name="VerschlüsselterText" id="encrypted-text" rows="10" cols="60" placeholder="Verschlüsselter Text"></textarea>
+        <br>
+        <input type="button" id="decrypt-btn" value="Entschlüsseln">
+      </div>
+    </div>
+    <div class="canvas-container">
+      <canvas width="750" height="500" id="scheibe"></canvas>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
