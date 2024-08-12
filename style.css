@@ -19,13 +19,6 @@ h1 {
   gap: 20px;
 }
 
-.key-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 br {
   display: block;
   margin: 10px 0;
@@ -77,4 +70,6 @@ textarea:focus {
 .canvas-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }

@@ -6,6 +6,9 @@ const keyInput = document.getElementById('key');
 const scheibe = document.getElementById('scheibe');
 
 const ctx = scheibe.getContext('2d');
+const gap = 10;
+const height = scheibe.height - gap;
+const width = scheibe.width;
 ctx.strokeStyle = 'rgb(0,0,0)';
 ctx.lineWidth = "3";
 ctx.lineCap='round';
@@ -28,28 +31,26 @@ CanvasRenderingContext2D.prototype.fillTextCircle = function(text,x,y,radius,sta
 
 const drawScheibe = () => {
   ctx.textBaseline = 'top';
-  ctx.textAlign = 'left';
-  ctx.font = 'bold 25px Montserrat';
-  ctx.fillText("außen: Klartext", 0,10);
+  ctx.font = 'bold 15px Montserrat';
   ctx.textAlign = 'center';
   ctx.beginPath();
   ctx.fillStyle = 'rgb(255,255,255)';
-  ctx.arc(375,250, 240, 0, Math.PI*2);
+  ctx.arc(width/2,height/2+gap/2, height/2, 0, Math.PI*2);
   ctx.fill();
   ctx.stroke();
   ctx.beginPath();
   ctx.fillStyle = 'rgb(125,125,125)';
-  ctx.arc(375,250,180, 0, 2*Math.PI);
+  ctx.arc(width/2,height/2+gap/2,height/2-35, 0, 2*Math.PI);
   ctx.fill();
   ctx.stroke();
   ctx.beginPath();
-  ctx.arc(375,250,5,0,2*Math.PI);
+  ctx.arc(width/2,height/2,5,0,2*Math.PI);
   ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillText("Geheimtext", 375,255);
+  ctx.fillText("Geheimtext", width/2,height/2+10);
   ctx.fill();
-  ctx.font = 'bold 30px Montserrat';
-  ctx.fillTextCircle("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 375, 250, 230, 0);
-  ctx.fillTextCircle("ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase(), 375, 250, 170, 0 - Number(keyInput.value)*2*Math.PI/26);
+  ctx.font = 'bold 20px Montserrat';
+  ctx.fillTextCircle("ABCDEFGHIJKLMNOPQRSTUVWXYZ", width/2, height/2 + gap/2, height/2-10, 0);
+  ctx.fillTextCircle("ABCDEFGHIJKLMNOPQRSTUVWXYZ".toLowerCase(), width/2, height/2 + gap/2, height/2-40, 0 - Number(keyInput.value)*2*Math.PI/26);
 }
 
 

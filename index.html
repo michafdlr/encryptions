@@ -23,31 +23,33 @@
       Zum verschlüsseln deines Klartextes mit dem Caesar-Verfahren, gib in das Klartext-Feld den Klartext ein und klicke den "Verschlüsseln"-Knopf.
       <br>
       Zum entschlüsseln deines verschlüsselten Textes mit dem Caesar-Verfahren, gib in das Feld "Verschlüsselter Text" den verschlüsselten Text ein und klicke den "Entschlüsseln"-Knopf.
+      <br>
+      Zum einstellen des Schlüssels nutzt man das Eingabefeld, die Scheibe visualisiert die Paarung von Klar- und Geheimtext (klar: außen, geheim: innen).
     </p>
     <div class="textbox-container">
       <div class="textbox">
         <h3>
           <label for="Klartext">Klartext:</label>
         </h3>
-        <textarea name="Klartext" id="decrypted-text" rows="10" cols="60" placeholder="Klartext"></textarea>
+        <textarea name="Klartext" id="decrypted-text" rows="5" cols="40" placeholder="Klartext"></textarea>
         <br>
         <input type="button" id="encrypt-btn" value="Verschlüsseln">
-      </div>
-      <div class="key-box">
-        <h3>Schlüssel (0-25)</h3>
-        <input type="number" id="key" min="0" max="25" name="key" value="0">
       </div>
       <div class="textbox">
         <h3>
           <label for="VerschlüsselterText">Verschlüsselter Text:</label>
         </h3>
-        <textarea name="VerschlüsselterText" id="encrypted-text" rows="10" cols="60" placeholder="Verschlüsselter Text"></textarea>
+        <textarea name="VerschlüsselterText" id="encrypted-text" rows="5" cols="40" placeholder="Verschlüsselter Text"></textarea>
         <br>
         <input type="button" id="decrypt-btn" value="Entschlüsseln">
       </div>
     </div>
     <div class="canvas-container">
-      <canvas width="750" height="500" id="scheibe"></canvas>
+      <div>
+        <h3>Schlüssel (0-25)</h3>
+        <input type="number" id="key" min="0" max="25" name="key" value="0">
+      </div>
+      <canvas width="300" height="300" id="scheibe"></canvas>
     </div>
     <script src="script.js" async defer></script>
   </body>
