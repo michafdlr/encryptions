@@ -3,7 +3,7 @@
 body {
   font-family: "Montserrat", sans-serif;;
   background-color: whitesmoke;
-  margin: 0;
+  margin: 20px;
   padding: 0 10px 10px 10px;
 }
 
@@ -17,6 +17,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-left: 10px;
 }
 
 br {
